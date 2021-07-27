@@ -20,8 +20,6 @@ WASM_CSRCS := \
 	clock/ClockHelper.cpp \
 	clock/DateTimeController.cpp \
 	clock/LittleVgl.cpp \
-	clock/jetbrains_mono_42.c \
-	clock/jetbrains_mono_76.c \
 	clock/jetbrains_mono_bold_20.c \
 	clock/jetbrains_mono_extrabold_compressed.c
 
