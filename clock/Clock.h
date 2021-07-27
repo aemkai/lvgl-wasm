@@ -45,7 +45,7 @@ namespace Pinetime {
 
           void OnObjectEvent(lv_obj_t *pObj, lv_event_t i);
         private:
-            static const char* MonthsToString(Pinetime::Controllers::DateTime::Months month);
+            static const char* MonthsToStringLow(Pinetime::Controllers::DateTime::Months month);
             static const char* MonthShortToString(Pinetime::Controllers::DateTime::Months month);
             static const char* MonthShortToStringLow(Pinetime::Controllers::DateTime::Months month);
             static const char* DayOfWeekToString(Pinetime::Controllers::DateTime::Days dayOfWeek);
