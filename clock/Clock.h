@@ -77,7 +77,6 @@ namespace Pinetime {
 
           lv_obj_t* label_time;
           lv_obj_t* label_time_ampm;
-		  lv_obj_t* label_sec;          
           lv_obj_t* label_date;
           lv_obj_t* backgroundLabel;
           lv_obj_t * batteryIcon;
@@ -90,6 +89,10 @@ namespace Pinetime {
           lv_obj_t* stepValue;
           lv_obj_t* notificationIcon;          
 
+          /* additional MK */
+          lv_obj_t* label_sec; 
+          lv_obj_t * stepsArc;
+          
           Controllers::DateTime& dateTimeController;
           Controllers::Battery& batteryController;
           Controllers::Ble& bleController;
