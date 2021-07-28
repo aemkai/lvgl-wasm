@@ -90,9 +90,27 @@ namespace Pinetime {
           lv_obj_t* notificationIcon;          
 
           /* additional MK */
+          // Allgemein
           lv_obj_t* label_sec; 
-          lv_obj_t * singleArc;
-          lv_obj_t * singleArc2;
+          
+          // binaer Uhr        
+            #define ARC_SIZE	20
+
+            lv_obj_t * minArc0;
+            lv_obj_t * minArc1;
+            lv_obj_t * minArc2;
+            lv_obj_t * minArc3;
+            lv_obj_t * minArc4;
+            lv_obj_t * minArc5;
+
+            lv_obj_t * hourArc0;
+            lv_obj_t * hourArc1;
+            lv_obj_t * hourArc2;
+            lv_obj_t * hourArc3;
+            lv_obj_t * hourArc4;
+          
+          
+          
           
           Controllers::DateTime& dateTimeController;
           Controllers::Battery& batteryController;
