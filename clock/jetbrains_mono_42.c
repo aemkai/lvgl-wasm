@@ -1,14 +1,10 @@
+#include "../lvgl.h" ////#include "lvgl/lvgl.h"
+
 /*******************************************************************************
  * Size: 42 px
  * Bpp: 1
  * Opts: 
  ******************************************************************************/
-
-#ifdef LV_LVGL_H_INCLUDE_SIMPLE
-#include "../lvgl.h"
-//#else
-//#include "lvgl/lvgl.h"
-#endif
 
 #ifndef JETBRAINS_MONO_42
 #define JETBRAINS_MONO_42 1
@@ -206,11 +202,6 @@ static const lv_font_fmt_txt_cmap_t cmaps[] =
  *  ALL CUSTOM DATA
  *--------------------*/
 
-#if LV_VERSION_CHECK(8, 0, 0)
-/*Store all the custom data of the font*/
-static  lv_font_fmt_txt_glyph_cache_t cache;
-static const lv_font_fmt_txt_dsc_t font_dsc = {
-#else
 static lv_font_fmt_txt_dsc_t font_dsc = {
 #endif
     .glyph_bitmap = glyph_bitmap,
@@ -222,9 +213,6 @@ static lv_font_fmt_txt_dsc_t font_dsc = {
     .bpp = 1,
     .kern_classes = 0,
     .bitmap_format = 0,
-#if LV_VERSION_CHECK(8, 0, 0)
-    .cache = &cache
-#endif
 };
 
 
@@ -233,21 +221,13 @@ static lv_font_fmt_txt_dsc_t font_dsc = {
  *----------------*/
 
 /*Initialize a public general font descriptor*/
-#if LV_VERSION_CHECK(8, 0, 0)
-const lv_font_t jetbrains_mono_42 = {
-#else
 lv_font_t jetbrains_mono_42 = {
-#endif
     .get_glyph_dsc = lv_font_get_glyph_dsc_fmt_txt,    /*Function pointer to get glyph's data*/
     .get_glyph_bitmap = lv_font_get_bitmap_fmt_txt,    /*Function pointer to get glyph's bitmap*/
     .line_height = 31,          /*The maximum line height required by the font*/
     .base_line = 0,             /*Baseline measured from the bottom of the line*/
 #if !(LVGL_VERSION_MAJOR == 6 && LVGL_VERSION_MINOR == 0)
     .subpx = LV_FONT_SUBPX_NONE,
-#endif
-#if LV_VERSION_CHECK(7, 4, 0)
-    .underline_position = -7,
-    .underline_thickness = 2,
 #endif
     .dsc = &font_dsc           /*The custom font data. Will be accessed by `get_glyph_bitmap/dsc` */
 };
