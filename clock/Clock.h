@@ -91,7 +91,7 @@ namespace Pinetime {
 
           /* additional MK */
           lv_obj_t* label_sec; 
-          lv_obj_t * stepsArc;
+          lv_obj_t * singleArc;
           
           Controllers::DateTime& dateTimeController;
           Controllers::Battery& batteryController;
