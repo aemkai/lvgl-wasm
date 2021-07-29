@@ -94,20 +94,19 @@ namespace Pinetime {
           lv_obj_t* label_sec; 
           
           // binaer Uhr        
-            #define ARC_SIZE	20
+            #define LED_SIZE	20
+            lv_obj_t * minLED0;
+            lv_obj_t * minLED1;
+            lv_obj_t * minLED2;
+            lv_obj_t * minLED3;
+            lv_obj_t * minLED4;
+            lv_obj_t * minLED5;
 
-            lv_obj_t * minArc0;
-            lv_obj_t * minArc1;
-            lv_obj_t * minArc2;
-            lv_obj_t * minArc3;
-            lv_obj_t * minArc4;
-            lv_obj_t * minArc5;
-
-            lv_obj_t * hourArc0;
-            lv_obj_t * hourArc1;
-            lv_obj_t * hourArc2;
-            lv_obj_t * hourArc3;
-            lv_obj_t * hourArc4;
+            lv_obj_t * hourLED0;
+            lv_obj_t * hourLED1;
+            lv_obj_t * hourLED2;
+            lv_obj_t * hourLED3;
+            lv_obj_t * hourLED4;
           
           
           
