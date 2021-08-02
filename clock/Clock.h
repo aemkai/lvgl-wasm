@@ -95,7 +95,8 @@ namespace Pinetime {
           lv_obj_t* label_sec; 
           
           // binaer Uhr        
-            #define LED_SIZE	18
+            #define LED_SIZE	37
+            #define LED_RING	2
             lv_obj_t * minLED0;
             lv_obj_t * minLED1;
             lv_obj_t * minLED2;
