@@ -95,6 +95,9 @@ namespace Pinetime {
           lv_obj_t* label_sec; 
           
 		// Binary Watch
+          		uint8_t minutes_old = 0;
+		uint8_t seconds_old = 0;
+          
 		// Time
 		#define LED_SIZE1	37
 		#define LED_RING1	2
@@ -117,7 +120,15 @@ namespace Pinetime {
 		lv_obj_t * hourLED2;
 		lv_obj_t * hourLED3;
 		lv_obj_t * hourLED4;
-		
+          
+        #define LED_COL_SEC_ON		lv_color_hex(0xDDDD00)
+		#define LED_COL_SEC_OFF		lv_color_hex(0x444400)
+		#define NR_SECBARS	4
+		#define SECBAR_SPACE_V	5
+		lv_obj_t* sec_bar[NR_SECBARS];
+          
+          
+          
 		// Date
 		#define LED_SIZE2	18
 		#define LED_RING2	2
